@@ -75,19 +75,17 @@ Built a relational data model:
 
 This allowed true analytical capability instead of flat reporting.
 
-## 🧠 Advanced Analytics with DAX
+## 📊 Key DAX Measures
 
-Created key measures including:
+Examples of calculated measures created using DAX:
+ - Net Sales - =SUM(fact_sales_monthly[net_sales_amount])
+ - Net Sales 19 - =CALCULATE([Net Sales],dim_date[FY]="2019")
+ - Net Sales 20 - =CALCULATE([Net Sales],dim_date[FY]="2020")
+ - Net Sales 21 - =CALCULATE([Net Sales],dim_date[FY]="2021")
+ - 21 vs 20 - =DIVIDE([Net Sales 21],[Net Sales 20],0)
+ - target 21 - =SUM(ns_targets_2021[ns_target])
+ - 2021-Target - =[Net Sales 21]-[target 21]
 
- - Total Sales
-
- - Year-over-Year Growth %
-
- - Target Variance
-
- - Target Variance %
-
-This enabled dynamic KPI tracking and trend analysis across years, customers, and markets.
 
 ## 📖 What the Data Revealed
 🚀 1. Growth Was Real — But Uneven
